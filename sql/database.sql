@@ -1,4 +1,5 @@
-CREATE DATABASE news_portal;
+DROP DATABASE IF EXISTS news_portal;
+CREATE DATABASE news_portal CHARSET utf8mb4;
 USE news_portal;
 
 CREATE TABLE news (
