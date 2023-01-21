@@ -1,8 +1,65 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+#header{
+  height: 10vh;
+}
+
+#sec_noticias{
+  height: 75vh;
+  width: 100%;
+  background-image: url("https://t3.ftcdn.net/jpg/02/23/38/64/360_F_223386472_g3ZlTnCCTRD9jtcvXML9F3HUNu91UAa0.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer{
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#iconos{
+  color: white;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 15px;
+  margin-top: .5rem;
+}
+
+#news_internacionales{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;  
+  /* border: 1px solid green; */
+}
+
+#news_intern{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+  /* border: 1px solid red; */
+}
+
+#art_intern{
+  width: 40%;
+  height: 30vh;
+  margin: 1rem;
+  border: 1px solid lightblue;
+  text-align: center;
 }

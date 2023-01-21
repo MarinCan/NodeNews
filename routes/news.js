@@ -25,7 +25,6 @@ router.post('/', function(req, res, next) {
     }, (error, result) => {
         res.redirect('/news')
     })
-
 });
 
 module.exports = router;
