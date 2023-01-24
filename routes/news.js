@@ -8,9 +8,17 @@ const connection = dbconnection()
 /* GET news page. */
 router.get('/', function(req, res, next) {
     // res.send('News!!')
-    connection.query("SELECT * FROM news", (error, result) => {
+
+    let num_q = parseInt(req.query.q)
+    // console.log("Numero de query:", num_q)
+    // console.log("Numero de query:", typeof(num_q))
+
+    let consulta = `SELECT * FROM news LIMIT ${num_q*5}, 5`
+
+    connection.query(consulta, (error, result) => {
         res.render('news/news.ejs', {
-            news: result
+            news: result,
+            num_q: num_q
         });
     })
 });
@@ -23,7 +31,7 @@ router.post('/', function(req, res, next) {
         title,
         news
     }, (error, result) => {
-        res.redirect('/news')
+        res.redirect('/news?q=0')  // PORQUE ?!?!?
     })
 });
 

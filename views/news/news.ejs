@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a href="#" class="navbar-brand mx-auto">NEWS</a>
+        <a href="/" class="navbar-brand mx-auto">NEWS</a>
     </nav>
 
     <!-- <%= news[0].title %> -->
@@ -30,6 +30,16 @@
                         </tr>
                     <% } %>
                 </table>
+
+                <div>
+                    <% if (num_q > 0){ %>
+                        <a href='/news?q=<%= num_q - 1%>'>Anterior</a>
+                    <% } %>
+
+                    <% if (num_q <= news.length / 5){ %>
+                        <a href='/news?q=<%= num_q + 1%>'>Siguiente</a>
+                    <% } %>                    
+                </div>
             </div>
 
             <div class="col-md-6 mt-4 card">
@@ -47,5 +57,6 @@
         </div>
     </div>
 
+    <script src="/mysql-connector/public/javascripts/botones_news.js"></script>
 </body>
 </html>
