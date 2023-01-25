@@ -31,7 +31,7 @@ router.post('/', function(req, res, next) {
         title,
         news
     }, (error, result) => {
-        res.redirect('/news?q=0')  // PORQUE ?!?!?
+        res.redirect(`/news?q=0`)  // PORQUE ?!?!?
     })
 });
 
